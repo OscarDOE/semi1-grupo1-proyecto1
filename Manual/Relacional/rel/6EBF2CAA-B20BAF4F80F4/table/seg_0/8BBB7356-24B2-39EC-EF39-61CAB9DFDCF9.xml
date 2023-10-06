@@ -1,0 +1,160 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8BBB7356-24B2-39EC-EF39-61CAB9DFDCF9" name="cancion">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 07:44:49 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<ordsAlias>table_4</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="A16ECBAE-ED6B-06A4-0E6E-A84BF6F8B6CD">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 07:46:34 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="07CFB9C5-89D4-1B2E-113C-3C7037297A44">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 07:46:34 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="imagen" id="8F533598-CCAF-B64C-7EEA-4C97AEF33A9A">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 07:46:34 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="duracion" id="3EA9DDC3-9E68-FDA0-65E5-69C485761A43">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 07:46:34 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="archivo" id="11030E47-3701-0BA7-0C14-B38B26A89C23">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 07:46:34 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="artista_id" id="97E6F277-09B5-84FC-82EF-34F114C7525F">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 07:46:57 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4EB561A1-DB1C-2792-0514-DF52B3C1A33B" referredColumn="F42F5FE3-7FDD-5DB3-3462-EE097CC82054"/>
+</associations>
+</Column>
+<Column name="album_id" id="F3126DD1-882C-4D90-B8CB-76852C854200">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 07:47:02 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="671D598C-0822-A42C-B74B-775AEAB52F95" referredColumn="2D3DEE60-BA7F-210E-EB0C-2B11AAAFD99C"/>
+</associations>
+</Column>
+<Column name="veces_reproducido" id="E8D87A3E-7915-2DB5-7C76-C153085D7816">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 07:50:36 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="historial_cancion_id" id="D2A72EAB-899A-7FBE-599E-EB4950CCF35D">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 07:53:29 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="81D37C76-FD14-8B62-E8AE-A9C7469DE653" referredColumn="CAAEC457-949C-B8BF-24B9-8D77F934BCE9"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8FDA7CD8-12DB-E6A9-9912-6B0FBC9FBC48" name="cancion_PK">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 07:46:34 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A16ECBAE-ED6B-06A4-0E6E-A84BF6F8B6CD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7EF195F3-CEEE-6648-654C-42B9A305A3C7" name="cancion_artista_FK">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 07:46:57 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="97E6F277-09B5-84FC-82EF-34F114C7525F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1D0B89ED-FD1B-6DE8-9836-D159F4670CA4" name="cancion_album_FK">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 07:47:02 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F3126DD1-882C-4D90-B8CB-76852C854200"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C1A403FA-EA30-071E-11C7-D9262D57F0CF" name="cancion_historial_cancion_FK">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 07:53:29 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D2A72EAB-899A-7FBE-599E-EB4950CCF35D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

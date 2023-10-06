@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C346CAC2-FAF9-8079-132D-60352551BAFD" name="artista">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 07:41:25 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<ordsAlias>table_2</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="F42F5FE3-7FDD-5DB3-3462-EE097CC82054">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 07:42:24 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="F456C0F1-EAE7-E19F-C26A-4B214A39195D">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 07:42:24 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="foto" id="35E2CD8D-56ED-8CBA-EE22-A167137B5D31">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 07:42:24 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_nacimiento" id="F2EE7173-A9D0-E3EA-F6E1-545BB789BA2E">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 07:42:24 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="veces_reproducido" id="69E5FD88-45C7-121A-327C-DF168EC03CEE">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 07:51:32 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F7396B63-3B1C-B31E-EE31-40E039EE3A1E" name="artista_PK">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 07:42:24 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F42F5FE3-7FDD-5DB3-3462-EE097CC82054"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

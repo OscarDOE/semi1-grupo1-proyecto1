@@ -1,0 +1,45 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FD435EC5-0B67-87D9-AD2A-02210A939C43" name="historial_cancion">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 07:52:07 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<ordsAlias>table_9</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="CAAEC457-949C-B8BF-24B9-8D77F934BCE9">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 07:52:48 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha" id="21575F0D-3117-4AEB-7274-9612D60B484F">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 07:53:09 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9671D1E6-4DCA-1861-33C7-22BCEDDAA44E" name="historial_cancion_PK">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 07:52:48 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CAAEC457-949C-B8BF-24B9-8D77F934BCE9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

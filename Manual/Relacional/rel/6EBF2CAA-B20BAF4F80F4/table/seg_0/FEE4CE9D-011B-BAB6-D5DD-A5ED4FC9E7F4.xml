@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FEE4CE9D-011B-BAB6-D5DD-A5ED4FC9E7F4" name="playlist_cancion">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 07:49:06 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<ordsAlias>table_8</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="9570B6B5-868F-0B57-44BB-264DAC74549B">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 07:49:36 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="playlist_id" id="A0851480-CFCE-CF5D-9DC8-3C656DA32976">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 07:49:58 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8BBC2F43-16BB-945E-E2D0-B225429675FD" referredColumn="B9F259EF-B8F9-BFC6-FA57-C5EB56B7D64C"/>
+</associations>
+</Column>
+<Column name="cancion_id" id="9FB113E9-75A7-CB1E-1A78-C54E3A6B1D0F">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 07:50:01 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="49D651C2-8BFD-8F24-4BDE-2502E17D2DBD" referredColumn="A16ECBAE-ED6B-06A4-0E6E-A84BF6F8B6CD"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2B221B71-490C-427E-77E5-EE0508E9D562" name="playlist_cancion_PK">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 07:49:36 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9570B6B5-868F-0B57-44BB-264DAC74549B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E97B5B04-F6CC-E293-CFBD-530AD5BDAC1E" name="playlist_cancion_playlist_FK">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 07:49:58 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A0851480-CFCE-CF5D-9DC8-3C656DA32976"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DD57487F-77E4-2A00-B560-806A795F9F57" name="playlist_cancion_cancion_FK">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 07:50:01 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9FB113E9-75A7-CB1E-1A78-C54E3A6B1D0F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

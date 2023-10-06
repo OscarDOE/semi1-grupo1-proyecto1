@@ -1,0 +1,104 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FB294273-6B1A-F779-8A47-6F3E6F2692AA" name="album">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 07:42:27 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<ordsAlias>table_3</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="2D3DEE60-BA7F-210E-EB0C-2B11AAAFD99C">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 07:44:39 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="01A2FD9A-4E39-0BD5-D03E-53ED15804C9A">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 07:44:39 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descripcion" id="FC871AF0-17A6-7A55-6588-7A44A2739B2C">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 07:44:39 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500</dataTypeSize>
+<ownDataTypeParameters>500,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="imagen_portada" id="C7549D12-1A16-D373-5BCA-72378B497310">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 07:44:39 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500</dataTypeSize>
+<ownDataTypeParameters>500,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="artista_id" id="C8D84D1C-D811-CC16-161F-46B44C5A7665">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 07:46:51 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="39BEB857-BF6A-0A18-8389-71FDB6CB2E64" referredColumn="F42F5FE3-7FDD-5DB3-3462-EE097CC82054"/>
+</associations>
+</Column>
+<Column name="veces_reproducido" id="98E9419D-F0AA-F975-79D2-0B8F901C1A72">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 07:51:21 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A784C19F-CCEC-1338-3C6B-04ADCEE6F6D6" name="album_PK">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 07:44:39 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2D3DEE60-BA7F-210E-EB0C-2B11AAAFD99C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DB841FCF-FBA3-3711-3D32-6830DFE525C4" name="album_artista_FK">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 07:46:51 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C8D84D1C-D811-CC16-161F-46B44C5A7665"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
