@@ -65,9 +65,8 @@ const MainPage = () => {
                     <Grid item xs={12} style={gridStyle} mt={2} mb={4} ml={3} mr={3}>
                         <Item style={{ backgroundColor: '#4C4C4C' }} m={2}>
                             <img
-                            style={{ backgroundColor: 'black' }}
+                            style={{ backgroundColor: 'black', width: '300px', height: '200px'  }}
                             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkIsN7J5Bk4aP2_kwQRa3sG7ecXZD439McFw&usqp=CAU"
-                            style={{ width: '300px', height: '200px' }}
                             alt="Descripción de la imagen"
                             />
                             <h1 style={{ color: 'white' }}> Pokemon 1</h1>
@@ -102,9 +101,8 @@ const MainPage = () => {
                     <Grid item xs={12} style={gridStyle} mt={2} mb={4} ml={3} mr={3}>
                         <Item style={{ backgroundColor: '#4C4C4C' }} m={2}>
                             <img
-                            style={{ backgroundColor: 'black' }}
+                            style={{ backgroundColor: 'black',  width: '300px', height: '200px'  }}
                             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkIsN7J5Bk4aP2_kwQRa3sG7ecXZD439McFw&usqp=CAU"
-                            style={{ width: '300px', height: '200px' }}
                             alt="Descripción de la imagen"
                             />
                             <h1 style={{ color: 'white' }}> Pokemon 1</h1>
@@ -125,9 +123,8 @@ const MainPage = () => {
                     <Grid item xs={12} style={gridStyle} mt={2} mb={4} ml={3} mr={3}>
                         <Item style={{ backgroundColor: '#4C4C4C' }} m={2}>
                             <img
-                            style={{ backgroundColor: 'black' }}
+                            style={{ backgroundColor: 'black', width: '300px', height: '200px'  }}
                             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkIsN7J5Bk4aP2_kwQRa3sG7ecXZD439McFw&usqp=CAU"
-                            style={{ width: '300px', height: '200px' }}
                             alt="Descripción de la imagen"
                             />
                             <h1 style={{ color: 'white' }}> Pokemon 1</h1>

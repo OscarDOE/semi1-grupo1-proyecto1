@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const rootElement = document.getElementById('root');
-rootElement.style.backgroundColor = 'black';
+// rootElement.style.backgroundColor = 'black';
 root.render(
   <React.StrictMode>
     <App />

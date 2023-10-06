@@ -13,7 +13,7 @@ const Register = () => {
 
     const [error, setError] = useState(null);
     const navigate = useNavigate();
-    const ruta_AWS = ''
+    const ruta_AWS = 'http://localhost:4000/'
 
     // CREAMOS LAS VARIABLES DEPENDIENDO QUE INFORMACION TENEMOS QUE MANEJAR
     const [nombre, setNombre] = useState('');
@@ -26,38 +26,49 @@ const Register = () => {
 
     // CREAMOS UN OBJETO DE LA INFO QUE VAMOS A MANDAR AL BACK
     const [user, setUser] = useState({
-        nombre: "",
-        apellido: "",
+        name: "",
+        lastname: "",
         email: "",
         password: "",
         confPass: "",
-        fecha_nacimiento: "",
-        foto: ""
+        date: "",
+        url: "",
+        rol:1
     })
 
 
     // CON ESTA FUNCION MANDAMOS LA INFO AL BACK
     const handleRegister = async (e) => {
         e.preventDefault()
-
+        console.log(user.name)
+        console.log(user.lastname)
+        console.log(user.url)
         // CREAMOS UN FORMDATA Y LO LLENAMOS DE LA INFO QUE LLENO EL USUARIO CON EL OBJETO QUE CREAMOS AL INICIO
         const formData = new FormData();
-        formData.append("nombre",user.nombre);
-        formData.append("apellido",user.apellido);
+        formData.append("name",user.nombre);
+        formData.append("lastname",user.apellido);
         formData.append("email",user.email);
         formData.append("password",user.password);
-        formData.append("confPass",user.confPass);
-        formData.append("fecha_nacimiento",user.fecha_nacimiento);
-        formData.append("foto",user.foto);
+        //formData.append("confPass",user.confPass);
+        formData.append("date",user.fecha_nacimiento);
+        // formData.append("url","als2s");
+        formData.append("url",user.url);
+        formData.append("rol",1);
+
+        
 
         // ENDPOINT QUE VAMOS A EJECUTAR PA MANDAR EL FORMDATA CON LA INFO
-        const endpoint = await fetch(ruta_AWS+'/', {
+        const endpoint = await fetch(ruta_AWS+'user/register', {
             method: "POST",
-            body:formData
+            body: formData
+            // headers: {
+            //     'Content-Type': 'application/json'
+            // },body: JSON.stringify(user)
         });
 
         // SE VERIFICA SI TODO SALIO BIEN ENTONCES SE PROCEDE O SE MUESTRA ERROR, DEPENDIENDO
         const resp = await endpoint.json();
+        console.log(formData)
         if (endpoint.status === 400 || endpoint.status === 500 || endpoint.status === 404){
             setError(resp.message);
         }
@@ -79,21 +90,18 @@ const Register = () => {
                         label="Nombre"
                         fullWidth
                         margin="normal"
-                        value={nombre}
-                        onChange={(e) => setUser({ ...user, nombre: e.target.value })}
+                        onChange={(e) => setUser({ ...user, name: e.target.value })}
                     />
                     <TextField
                         label="Apellido"
                         fullWidth
                         margin="normal"
-                        value={apellido}
-                        onChange={(e) => setUser({ ...user, apellido: e.target.value })}
+                        onChange={(e) => setUser({ ...user, lastname: e.target.value })}
                     />
                     <TextField
                         label="Correo Electrónico"
                         fullWidth
                         margin="normal"
-                        value={email}
                         onChange={(e) => setUser({ ...user, email: e.target.value })}
                     />
  
@@ -102,7 +110,6 @@ const Register = () => {
                         label="Contraseña"
                         fullWidth
                         margin="normal"
-                        value={password}
                         onChange={(e) => setUser({ ...user, password: e.target.value })}
                     />
                     <TextField
@@ -110,7 +117,6 @@ const Register = () => {
                         label="Confirmar Contraseña"
                         fullWidth
                         margin="normal"
-                        value={confPass}
                         onChange={(e) => setUser({ ...user, confPass: e.target.value })}
                     />
 
@@ -120,7 +126,7 @@ const Register = () => {
                     <div>
                         <input
                             style={{ width: '100%', padding: '8px', border: '1px solid #ccc', borderRadius: '4px', boxSizing: 'border-box' }}
-                            onChange={(e) => setUser({ ...user, fecha_nacimiento: e.target.value })} type="date" ></input>
+                            onChange={(e) => setUser({ ...user, date: e.target.value })} type="date" ></input>
                     </div>
                     <div>
                         <label>Foto perfil</label>
@@ -128,7 +134,7 @@ const Register = () => {
                     <div>
                         <input
                             style={{ width: '100%', padding: '8px', border: '1px solid #ccc', borderRadius: '4px', boxSizing: 'border-box' }}
-                            onChange={(e) => setUser({ ...user, foto_perfil: e.target.files[0] })} type="file" name="f_Perfil" id="fo_Perfil"></input>
+                            onChange={(e) => setUser({ ...user, url: e.target.files[0] })} type="file" name="f_Perfil" id="fo_Perfil"></input>
                     </div>
 
 
