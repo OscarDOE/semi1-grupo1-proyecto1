@@ -7,13 +7,13 @@ class User extends Model {
     nombre: string,
     apellido: string,
     contrasena: string,
-    url: string,
+    // url: string,
     correo: string,
     fecha: string,
     rol: number
   ) {
-    const result = await sequelize.query('CALL RegistrarUsuario(:nombre, :apellido, :contrasena, :url, :correo, :fecha, :rol)', {
-      replacements: { nombre, apellido, contrasena, url, correo, fecha, rol },
+    const result = await sequelize.query('CALL RegistrarUsuario(:nombre, :apellido, :contrasena,\' FFFF\', :correo, :fecha, :rol)', {
+      replacements: { nombre, apellido, contrasena, correo, fecha, rol },
       type: QueryTypes.RAW,
     });
 

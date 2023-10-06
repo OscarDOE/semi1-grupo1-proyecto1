@@ -13,13 +13,13 @@ class UserController {
     if(req.file){
       imageUrl = req.file.location;
     }
-    const { name, lastname, password, url, email, date, rol } = req.body;
-    try {
-      const newUser = await UserService.newUser(name, lastname, password, url, email, date, rol);
+    const { name, lastname, password, email, date, rol } = req.body;
+    // try {
+      const newUser = await UserService.newUser(name, lastname, password, email, date, rol);
       res.status(200).json({newUser,"url:": imageUrl});
-    } catch (error) {
-      res.status(500).json({ error: 'Internal server error AQUI FALLO', message: error });
-    }
+    // } catch (error) {
+    //   res.status(500).json({ error: 'Internal server error AQUI FALLO', message: error });
+    // }
   }
 
   static async login(req, res) {

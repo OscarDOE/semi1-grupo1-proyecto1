@@ -63,10 +63,7 @@ const Register = () => {
         // ENDPOINT QUE VAMOS A EJECUTAR PA MANDAR EL FORMDATA CON LA INFO
         const endpoint = await fetch(ruta_AWS+'user/register', {
             method: "POST",
-            body: formData,
-            headers: {
-                'Content-Type': 'multipart/form-data',
-              },
+            body: formData
         });
         try{
 

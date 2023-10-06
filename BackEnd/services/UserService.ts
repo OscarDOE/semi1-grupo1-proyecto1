@@ -6,13 +6,13 @@ class UserService {
     name: string,
     lastname: string,
     password: string,
-    url: string,
+    // url: string,
     email: string,
     date: string,
     rol: number
   ): Promise<unknown[]> {
     //const hashedPassword = sha256Hash(password);
-    const newUser = await User.RegistrarUsuario(name, lastname, password, url, email, date, rol);
+    const newUser = await User.RegistrarUsuario(name, lastname, password,  email, date, rol);
     return newUser;
   }
 
