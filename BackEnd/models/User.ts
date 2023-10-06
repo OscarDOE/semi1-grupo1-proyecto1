@@ -20,16 +20,12 @@ class User extends Model {
     return result[0];
   };
 
-  static IniciarSesion = async function (correo: string, contrasena: string): Promise<{message: string, rol :number}> {
+  static IniciarSesion = async function (correo: string, contrasena: string)  {
     const result = await sequelize.query('CALL IniciarSesion(:correo, :contrasena)', {
       replacements: { correo, contrasena },
       type: QueryTypes.RAW,
     });
-    if (result[0] && typeof result[0] === 'object' && 'message' in result[0] && 'rol' in result[0]) {
-      return (result[0] as { message: string, rol: number });
-    } else {
-      throw new Error('El resultado no es el tipo esperado');
-    }
+    return result;
   };
 
   static EditarPerfil = async function (id: number, nuevoNombre: string, nuevoApellido: string, url: string, correo: string) {

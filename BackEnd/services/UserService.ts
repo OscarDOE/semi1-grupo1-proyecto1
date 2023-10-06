@@ -1,5 +1,5 @@
 import User from '../models/User';
-import { hash } from 'bcrypt';
+//import sha256Hash from '../utils/util'
 
 class UserService {
   static async newUser(
@@ -11,8 +11,8 @@ class UserService {
     date: string,
     rol: number
   ): Promise<unknown[]> {
-    const hashedPassword = await hash(password, 10);
-    const newUser = await User.RegistrarUsuario(name, lastname, hashedPassword, url, email, date, rol);
+    //const hashedPassword = sha256Hash(password);
+    const newUser = await User.RegistrarUsuario(name, lastname, password, url, email, date, rol);
     return newUser;
   }
 
@@ -20,7 +20,8 @@ class UserService {
     return User.ObtenerUsuarios();
   }
 
-  static async login(email: string, password: string): Promise<{message: string, rol :number}> {
+  static async login(email: string, password: string) {
+    //const hashedPassword = sha256Hash(password);
     return User.IniciarSesion(email, password);
   }
 
