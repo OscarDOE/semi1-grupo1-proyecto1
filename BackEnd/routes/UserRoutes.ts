@@ -1,4 +1,4 @@
-import {express } from 'express';
+import express  from 'express';
 import UserController from '../controllers/UserController';
 import authenticateToken from '../middleware/authenticateToken'; 
 
