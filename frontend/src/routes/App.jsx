@@ -5,6 +5,9 @@ import Home from "../pages/Home";
 import Register from "../pages/Register";
 import Login from "../pages/Login"
 import Fotoox from "../pages/Foto";
+import AgregarCanciones from "../pages/AgregarCanciones";
+import Profile from "../pages/Profile";
+import MainPage from "../pages/MainPage";
 export const App = () => {
   return (
     <BrowserRouter>
@@ -14,6 +17,10 @@ export const App = () => {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/foto" element={<Fotoox />} />
+            <Route path="/mainpage" element={<MainPage />} />
+            <Route path="/addCanciones" element={<AgregarCanciones />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/admincrud" element={<Fotoox />} />
 
             {/* <Route path="/reportes" element={<Reportes />} /> */}
                    {/* <Route path="/login" element={<LoginPage />} />

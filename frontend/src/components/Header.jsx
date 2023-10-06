@@ -74,15 +74,26 @@ const Header = () => {
                             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                                 {usuario_logeado?.rol === "1" ? 
                                 <>
-                                <Link to='/homeadmin'><Button color="inherit">Solicitudes pendientes</Button></Link>
-                                <Link to='/informeusers'><Button color="inherit">Informe</Button></Link>
+                                <Link to='/homepage'><Button color="inherit">Inicio</Button></Link>
+                                <Link ><Button color="inherit">Buscar</Button></Link>
+                                <Link to='/perfil'><Button color="inherit">Perfil</Button></Link>
+                                <Link to='/informeusers'><Button color="inherit">Playlist</Button></Link>
+                                <Link to='/favoritos'><Button color="inherit">Favoritos</Button></Link>
+                                <Link to='/historico'><Button color="inherit">Histórico</Button></Link>
+                                <Link ><Button color="inherit">Radio</Button></Link>
+                                <Link to='/admincrud'><Button color="inherit">Administrador</Button></Link>
                                 </> 
                                 : 
                                 <></>}
                                 {usuario_logeado?.rol === "2" ? 
                                 <>
-                                <Link to='/'><Button color="inherit">Nuevo pedido</Button></Link>
-                                <Link to='/'><Button color="inherit">Direcciones</Button></Link>
+                                <Link to='/homepage'><Button color="inherit">Inicio</Button></Link>
+                                <Link ><Button color="inherit">Buscar</Button></Link>
+                                <Link to='/perfil'><Button color="inherit">Perfil</Button></Link>
+                                <Link to='/informeusers'><Button color="inherit">Playlist</Button></Link>
+                                <Link to='/favoritos'><Button color="inherit">Favoritos</Button></Link>
+                                <Link to='/historico'><Button color="inherit">Histórico</Button></Link>
+                                <Link ><Button color="inherit">Radio</Button></Link>
                                 </> 
                                 : 
                                 <></>}

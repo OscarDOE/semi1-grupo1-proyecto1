@@ -1,0 +1,9 @@
+/* index.css o tu archivo de estilos personalizado */
+body {
+    background-color: green;
+    margin: 0; /* Elimina el margen predeterminado del body */
+    padding: 0; /* Elimina el relleno predeterminado del body */
+  }
+  
+  /* Estilos adicionales para tu aplicación */
+  /* ... */

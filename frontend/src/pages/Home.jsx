@@ -7,7 +7,7 @@ const navigate = useNavigate();
 
 
   return (
-    <Container maxWidth="md" style={{ marginTop: '40px' }}>
+    <Container maxWidth="md" style={{ marginTop: '40px' , backgroundColor:"lightcoral"}}>
       <Grid container spacing={3} justifyContent="center" alignItems="center">
         <Grid item xs={12}>
           <Typography variant="h4" align="center" gutterBottom>
