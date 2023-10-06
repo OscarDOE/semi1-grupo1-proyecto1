@@ -49,9 +49,7 @@ const Register = () => {
         formData.append("lastname",user.apellido);
         formData.append("email",user.email);
         formData.append("password",user.password);
-        //formData.append("confPass",user.confPass);
         formData.append("date",user.fecha_nacimiento);
-        // formData.append("url","als2s");
         formData.append("url",user.url);
         formData.append("rol",1);
 
