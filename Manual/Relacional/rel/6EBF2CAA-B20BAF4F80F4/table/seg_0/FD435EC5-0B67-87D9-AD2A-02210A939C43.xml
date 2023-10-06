@@ -28,6 +28,20 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="cancion_id" id="F6FC35F2-C1AB-3990-FF88-39FEA9A76359">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 08:31:28 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="44A691C3-A302-ADAE-454E-80B9AC3B789F" referredColumn="A16ECBAE-ED6B-06A4-0E6E-A84BF6F8B6CD"/>
+</associations>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="9671D1E6-4DCA-1861-33C7-22BCEDDAA44E" name="historial_cancion_PK">
@@ -39,6 +53,16 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="CAAEC457-949C-B8BF-24B9-8D77F934BCE9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="38759644-7064-BC7C-ADE9-44C00477E2D1" name="historial_cancion_cancion_FK">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 08:31:28 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F6FC35F2-C1AB-3990-FF88-39FEA9A76359"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

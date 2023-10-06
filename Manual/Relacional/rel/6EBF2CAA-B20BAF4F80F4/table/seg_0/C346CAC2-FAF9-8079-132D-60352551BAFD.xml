@@ -28,7 +28,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="foto" id="35E2CD8D-56ED-8CBA-EE22-A167137B5D31">
+<Column name="fotografia" id="35E2CD8D-56ED-8CBA-EE22-A167137B5D31">
 <createdBy>elmco</createdBy>
 <createdTime>2023-10-06 07:42:24 UTC</createdTime>
 <ownerDesignName>Relacional</ownerDesignName>
