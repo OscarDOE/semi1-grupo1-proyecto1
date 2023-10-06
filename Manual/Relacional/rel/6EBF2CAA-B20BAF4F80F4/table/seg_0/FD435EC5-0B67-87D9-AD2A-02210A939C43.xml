@@ -42,6 +42,20 @@
 <colAssociation fkAssociation="44A691C3-A302-ADAE-454E-80B9AC3B789F" referredColumn="A16ECBAE-ED6B-06A4-0E6E-A84BF6F8B6CD"/>
 </associations>
 </Column>
+<Column name="usuario_id" id="0BFFE075-3486-D8B1-D2B0-E346FFDDC3C3">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 23:01:23 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BBEBA745-9518-6878-5D37-DCEC42B4FE26" referredColumn="B9C07E25-B2B6-8AEB-040F-8D3B1A14F68F"/>
+</associations>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="9671D1E6-4DCA-1861-33C7-22BCEDDAA44E" name="historial_cancion_PK">
@@ -63,6 +77,16 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="F6FC35F2-C1AB-3990-FF88-39FEA9A76359"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DAE9FDCA-79FF-1394-EC80-AA625E8BFCD1" name="historial_cancion_usuario_FK">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 23:01:23 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0BFFE075-3486-D8B1-D2B0-E346FFDDC3C3"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

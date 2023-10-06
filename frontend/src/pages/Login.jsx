@@ -8,7 +8,7 @@ const Login = () => {
 
     const cookies = new Cookies();
     const handleNavigate = () => {
-        navigate("/");
+        navigate("/mainpage");
     };
 
     const [error, setError] = useState(null);

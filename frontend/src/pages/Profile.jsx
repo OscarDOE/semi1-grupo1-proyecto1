@@ -21,28 +21,28 @@ const Item = styled(Paper)(({ theme }) => ({
 const Perfil = () => {
 
     //const { logIn, getNombre } = useContext(AppEnvr)
-    const ruta_AWS = 'http://ec2-54-226-103-240.compute-1.amazonaws.com'
+    const ruta_AWS = 'http://localhost:5000/'
+    // const ruta_AWS = 'http://ec2-54-226-103-240.compute-1.amazonaws.com'
     const cookies = new Cookies();
     const usuario_logeado = cookies.get('session');
 
     const [datosperfil, setDatosperfil] = useState([]);
-    const [comision, setComision] = useState([]);
 
 
-    // useEffect(() => {getDatosRepartidor()}, [] );
+    useEffect(() => {getDatosRepartidor()}, [] );
     // useEffect(() => {getComision()}, [] );
 
-    // const getDatosRepartidor = async () =>{
+    const getDatosRepartidor = async () =>{
 
-    //   const endpoint = await fetch(ruta_AWS+'/miPerfil', {
-    //     method: "POST",
-    //     headers: {
-    //         'Content-Type': 'application/json'
-    //     },body: JSON.stringify({"token":usuario_logeado})
-    //   });
-    //   const resp_get = await endpoint.json();
-    //   setDatosperfil(resp_get[0])
-    // }
+      const endpoint = await fetch(ruta_AWS+'/miPerfil', {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json'
+        },body: JSON.stringify({"token":usuario_logeado.token})
+      });
+      const resp_get = await endpoint.json();
+      setDatosperfil(resp_get[0])
+    }
 
     // const getComision= async () =>{
 
@@ -87,7 +87,7 @@ const Perfil = () => {
             <br></br>
             <Grid container justifyContent="center" columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                 <Grid item xs={6} >
-                <Item style={{backgroundColor:'black', color:'white'}}><h1><center>Bienvenido {datosperfil.nombres + " " + datosperfil.apellidos }</center></h1> </Item>
+                <Item style={{backgroundColor:'black', color:'white'}}><h1><center>Bienvenido {datosperfil.name + " " + datosperfil.lastname }</center></h1> </Item>
                 </Grid>
             </Grid><br></br>
             <Grid container justifyContent="center" columnSpacing={{ xs: 1, sm: 2, md: 3 }} style={{backgroundColor:'black'}}>
@@ -95,18 +95,19 @@ const Perfil = () => {
                 <Grid item xs={6} >
                     <Item style={{backgroundColor:'black', color:'white'}}>
 
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkIsN7J5Bk4aP2_kwQRa3sG7ecXZD439McFw&usqp=CAU" style={{borderRadius:'50%'}} alt="Descripción de la imagen"  />
+                        {/* <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkIsN7J5Bk4aP2_kwQRa3sG7ecXZD439McFw&usqp=CAU" style={{borderRadius:'50%'}} alt="Descripción de la imagen"  /> */}
+                        <img src={datosperfil.url} style={{borderRadius:'50%'}} alt="Avatar"  />
                         <h3 style={{ marginBottom:'5px'}}>Nombres : {datosperfil.nombres}
                         <input 
                             type="text"
-                            placeholder={datosperfil.nombres}
+                            placeholder={datosperfil.name}
                         />
                         
                         </h3>
                         <h3 style={{ marginBottom:'5px'}}>Apellidos : {datosperfil.nombres}
                         <input 
                             type="text"
-                            placeholder={datosperfil.apellidos}
+                            placeholder={datosperfil.lastname}
                         />
                         
                         </h3>
@@ -120,7 +121,7 @@ const Perfil = () => {
                         <h3 style={{ marginBottom:'5px'}}>Fecha de Nacimiento : {datosperfil.nombres}
                         <input 
                             type="text"
-                            placeholder={datosperfil.fecha_nacimiento}
+                            placeholder={datosperfil.date}
                         />
                         </h3>
                     </Item>

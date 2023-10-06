@@ -8,6 +8,7 @@ import Fotoox from "../pages/Foto";
 import AgregarCanciones from "../pages/AgregarCanciones";
 import Profile from "../pages/Profile";
 import MainPage from "../pages/MainPage";
+import Historico from "../pages/Historico";
 import AgregarArtista from "../pages/AgregarArtista";
 export const App = () => {
   return (
@@ -19,6 +20,7 @@ export const App = () => {
             <Route path="/register" element={<Register />} />
             <Route path="/foto" element={<Fotoox />} />
             <Route path="/mainpage" element={<MainPage />} />
+            <Route path="/history" element={<Historico />} />
             <Route path="/addCanciones" element={<AgregarCanciones />} />
             <Route path="/addArtista" element={<AgregarArtista />} />
             <Route path="/profile" element={<Profile />} />
