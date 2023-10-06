@@ -4,7 +4,8 @@
   },
   "scripts": {
     "dev": "nodemon app.js",
-    "test": "croos-env NODE_ENV=test jest "
+    "test": "croos-env NODE_ENV=test jest ",
+    "start": "ts-node App.ts"
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
