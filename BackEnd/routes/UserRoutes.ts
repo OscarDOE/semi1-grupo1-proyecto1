@@ -17,21 +17,34 @@ aws.config.update({
 
 const s3 = new aws.S3();
 
-const upload = multer({
-  storage: multerS3({
-    s3: s3,
-    bucket: 'arn:aws:s3:::multimedia-semi1-g1',
-    acl: 'public-read', // Puedes ajustar los permisos
-    key: (req, file, cb) => {
-      cb(null, Date.now().toString() + '-' + file.originalname);
-    },
-  }),
-});
+// const upload2 = multer({
+//   storage: multerS3({
+//     s3: s3,
+//     bucket: 'arn:aws:s3:::multimedia-semi1-g1',
+//     acl: 'public-read', // Puedes ajustar los permisos
+//     key: (req, file, cb) => {
+//       cb(null, Date.now().toString() + '-' + file.originalname);
+//     },
+//   }),
+// });
 
 //
 
+
+// Configuración de Multer
+const storage = multer.diskStorage({
+  destination: function(req, file, cb) {
+    cb(null, 'uploads/'); // Directorio donde se guardarán los archivos subidos
+  },
+  filename: function(req, file, cb) {
+    cb(null, Date.now() + '-' + file.originalname); // Nombre del archivo guardado en el servidor
+  }
+});
+
+const upload = multer({ storage: storage });
+
 UserRoutes.post('/login',   UserController.login);
-UserRoutes.post('/register', upload.single('imagen'), UserController.registerUser);
+UserRoutes.post('/register', upload.single('url'), UserController.registerUser);
 UserRoutes.post('/updateuser',authenticateToken, UserController.updateUser);
 UserRoutes.get('/getusers', UserController.getAllUsers);
 
