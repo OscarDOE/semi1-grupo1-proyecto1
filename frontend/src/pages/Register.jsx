@@ -13,7 +13,7 @@ const Register = () => {
 
     const [error, setError] = useState(null);
     const navigate = useNavigate();
-    const ruta_AWS = 'http://localhost:4000/'
+    const ruta_AWS = 'http://localhost:5000/'
 
     // CREAMOS LAS VARIABLES DEPENDIENDO QUE INFORMACION TENEMOS QUE MANEJAR
     const [nombre, setNombre] = useState('');
@@ -32,42 +32,61 @@ const Register = () => {
         password: "",
         confPass: "",
         date: "",
-        url: "",
+        url: "TETET",
         rol:1
     })
 
 
     // CON ESTA FUNCION MANDAMOS LA INFO AL BACK
     const handleRegister = async (e) => {
-        e.preventDefault()
+        console.log("USER",user)
+        // e.preventDefault()
         console.log(user.name)
         console.log(user.lastname)
-        console.log(user.url)
+        console.log("GILE",user.url)
         // CREAMOS UN FORMDATA Y LO LLENAMOS DE LA INFO QUE LLENO EL USUARIO CON EL OBJETO QUE CREAMOS AL INICIO
         const formData = new FormData();
-        formData.append("name",user.nombre);
-        formData.append("lastname",user.apellido);
-        formData.append("email",user.email);
-        formData.append("password",user.password);
-        formData.append("date",user.fecha_nacimiento);
-        formData.append("url",user.url);
-        formData.append("rol",1);
+        console.log(user.name)
+        formData.append("name", user.name);
+        console.log("FFFFFFFF")
+        console.log(formData)
+        formData.append("lastname", user.lastname);
+        formData.append("email", user.email);
+        formData.append("password", user.password);
+        formData.append("date", user.date);
+        formData.append("url", user.url);
+        formData.append("rol", 1);
+        console.log("FORMDATA",formData.keys)
 
         
 
         // ENDPOINT QUE VAMOS A EJECUTAR PA MANDAR EL FORMDATA CON LA INFO
         const endpoint = await fetch(ruta_AWS+'user/register', {
             method: "POST",
-            body: formData
-            // headers: {
-            //     'Content-Type': 'application/json'
-            // },body: JSON.stringify(user)
+            body: formData,
+            headers: {
+                'Content-Type': 'multipart/form-data',
+              },
         });
+        try{
+
+            if (endpoint.ok) {
+                // El archivo se ha cargado correctamente
+                console.log('Archivo subido con éxito');
+              } else {
+                // Manejar errores
+                console.error('Error al cargar el archivo');
+              }
+        } catch (error) {
+        console.error('Error de red:', error);
+        }
+        
 
         // SE VERIFICA SI TODO SALIO BIEN ENTONCES SE PROCEDE O SE MUESTRA ERROR, DEPENDIENDO
         const resp = await endpoint.json();
         console.log(formData)
         if (endpoint.status === 400 || endpoint.status === 500 || endpoint.status === 404){
+            console.log("ERROR")
             setError(resp.message);
         }
         else{ 

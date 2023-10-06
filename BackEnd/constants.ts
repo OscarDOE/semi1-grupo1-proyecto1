@@ -1,2 +1,2 @@
 export const jwtKey = 'My secret key';
-export const port = 3000;
+export const port = 5000;

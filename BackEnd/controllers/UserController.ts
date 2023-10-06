@@ -5,6 +5,10 @@ import jsonwebtoken from 'jsonwebtoken';
 
 class UserController {
   static async registerUser(req, res) {
+    // console.log("ENTRO REGISTRO")
+    // console.log(req.body)
+    // console.log("FILE----------")
+    // console.log(req.file)
     let imageUrl:string;
     if(req.file){
       imageUrl = req.file.location;
