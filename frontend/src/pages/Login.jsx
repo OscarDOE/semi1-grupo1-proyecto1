@@ -13,7 +13,7 @@ const Login = () => {
 
     const [error, setError] = useState(null);
     const navigate = useNavigate();
-    const ruta_AWS = ''
+    const ruta_AWS = 'http://localhost:5000/'
 
 
     const [email, setEmail] = useState('');
@@ -21,7 +21,7 @@ const Login = () => {
 
 
     const [user, setUser] = useState({
-        email: "",
+        username: "",
         password: ""
     })
 
@@ -30,13 +30,16 @@ const Login = () => {
 
         // CREAMOS UN FORMDATA Y LO LLENAMOS DE LA INFO QUE LLENO EL USUARIO CON EL OBJETO QUE CREAMOS AL INICIO
         const formData = new FormData();
-        formData.append("email",user.email);
+        formData.append("username",user.username);
         formData.append("password",user.password);
 
         // ENDPOINT QUE VAMOS A EJECUTAR PA MANDAR EL FORMDATA CON LA INFO
-        const endpoint = await fetch(ruta_AWS+'/', {
+        const endpoint = await fetch(ruta_AWS+'user/login', {
             method: "POST",
-            body:formData
+            headers: {
+              "Content-Type":"application/json"
+          },
+          body:JSON.stringify(user)
         });
 
         // SE VERIFICA SI TODO SALIO BIEN ENTONCES SE PROCEDE O SE MUESTRA ERROR, DEPENDIENDO
@@ -63,7 +66,7 @@ const Login = () => {
             label="Usuario"
             fullWidth
             margin="normal"
-            onChange={(e) => setUser({ ...user, email: e.target.value })}
+            onChange={(e) => setUser({ ...user, username: e.target.value })}
           />
           <TextField
             type="password"

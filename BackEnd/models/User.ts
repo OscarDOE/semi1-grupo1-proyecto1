@@ -21,6 +21,7 @@ class User extends Model {
   };
 
   static IniciarSesion = async function (correo: string, contrasena: string)  {
+    console.log("INiciar serSION")
     const result = await sequelize.query('CALL IniciarSesion(:correo, :contrasena)', {
       replacements: { correo, contrasena },
       type: QueryTypes.RAW,

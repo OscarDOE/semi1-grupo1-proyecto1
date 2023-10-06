@@ -21,6 +21,7 @@ class UserService {
   }
 
   static async login(email: string, password: string) {
+    console.log("LOGGIN")
     //const hashedPassword = sha256Hash(password);
     return User.IniciarSesion(email, password);
   }
