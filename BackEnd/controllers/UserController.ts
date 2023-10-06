@@ -5,10 +5,14 @@ import jsonwebtoken from 'jsonwebtoken';
 
 class UserController {
   static async registerUser(req, res) {
+    let imageUrl:string;
+    if(req.file){
+      imageUrl = req.file.location;
+    }
     const { name, lastname, password, url, email, date, rol } = req.body;
     try {
       const newUser = await UserService.newUser(name, lastname, password, url, email, date, rol);
-      res.status(200).json(newUser);
+      res.status(200).json({newUser,"url:": imageUrl});
     } catch (error) {
       res.status(500).json({ error: 'Internal server error', message: error });
     }
