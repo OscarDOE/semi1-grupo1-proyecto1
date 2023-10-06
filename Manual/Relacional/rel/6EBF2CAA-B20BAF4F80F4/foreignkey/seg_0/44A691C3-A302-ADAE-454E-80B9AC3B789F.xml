@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="44A691C3-A302-ADAE-454E-80B9AC3B789F" containerWithKeyObject="FD435EC5-0B67-87D9-AD2A-02210A939C43" localFKIndex="38759644-7064-BC7C-ADE9-44C00477E2D1" name="historial_cancion_cancion_FK">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 08:31:28 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<referredTableLongName>cancion</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>8BBB7356-24B2-39EC-EF39-61CAB9DFDCF9</referredTableID>
+<keyObject>8FDA7CD8-12DB-E6A9-9912-6B0FBC9FBC48</keyObject>
+<referredKeyID>8FDA7CD8-12DB-E6A9-9912-6B0FBC9FBC48</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7E9C9A88-E12A-1D1E-3DEB-689ECA305130" name="favoritos">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 07:55:21 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<ordsAlias>table_10</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="0E3BF382-60F9-95C0-9FC2-577B6102F6E2">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 07:55:43 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="usuario_id" id="0F2DB276-E762-0B57-2BB8-7032AC18C427">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 07:56:01 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="833AE753-EE08-4A1C-3B61-24F378D89724" referredColumn="B9C07E25-B2B6-8AEB-040F-8D3B1A14F68F"/>
+</associations>
+</Column>
+<Column name="cancion_id" id="98C5D19B-C26C-CD0D-6FA5-B73F11AAFACF">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 07:56:11 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BEE010AE-877A-6A30-1032-F331B98C543D" referredColumn="A16ECBAE-ED6B-06A4-0E6E-A84BF6F8B6CD"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F15853F5-22DF-2FC2-EE24-F670C797C565" name="favoritos_PK">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 07:55:43 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0E3BF382-60F9-95C0-9FC2-577B6102F6E2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="94A95C8F-511F-37FF-0536-D0703400B2CC" name="favoritos_usuario_FK">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 07:56:01 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0F2DB276-E762-0B57-2BB8-7032AC18C427"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9AB28948-0CAF-721D-464D-8D3C46EC2DB7" name="favoritos_cancion_FK">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 07:56:11 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="98C5D19B-C26C-CD0D-6FA5-B73F11AAFACF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

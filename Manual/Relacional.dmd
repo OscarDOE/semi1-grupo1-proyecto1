@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="Relacional" id="CCF3B442-AEC1-6D39-D057-C9D04F547FB6" version="3.5">
+<createdBy>elmco</createdBy>
+<createdTime>2023-10-06 07:37:04 UTC</createdTime>
+<ownerDesignName>Relacional</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>CCF3B442-AEC1-6D39-D057-C9D04F547FB6</designId>
+</OSDM_Design>

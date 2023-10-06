@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { TextField, Button, Container, Typography, Paper } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import Cookies from "universal-cookie";
+import sLogin from "../styles/sLogin.css"
 
 const Login = () => {
 
@@ -62,7 +63,6 @@ const Login = () => {
             label="Usuario"
             fullWidth
             margin="normal"
-            value={email}
             onChange={(e) => setUser({ ...user, email: e.target.value })}
           />
           <TextField
@@ -70,7 +70,6 @@ const Login = () => {
             label="Contraseña"
             fullWidth
             margin="normal"
-            value={password}
             onChange={(e) => setUser({ ...user, password: e.target.value })}
           />
           <Button

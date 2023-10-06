@@ -8,6 +8,7 @@ import Fotoox from "../pages/Foto";
 import AgregarCanciones from "../pages/AgregarCanciones";
 import Profile from "../pages/Profile";
 import MainPage from "../pages/MainPage";
+import AgregarArtista from "../pages/AgregarArtista";
 export const App = () => {
   return (
     <BrowserRouter>
@@ -19,6 +20,7 @@ export const App = () => {
             <Route path="/foto" element={<Fotoox />} />
             <Route path="/mainpage" element={<MainPage />} />
             <Route path="/addCanciones" element={<AgregarCanciones />} />
+            <Route path="/addArtista" element={<AgregarArtista />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/admincrud" element={<Fotoox />} />
 
